@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "price": 499,
+        "image": "clean-code.jpg"
+    },
+    {
+        "id": 2,
+        "title": "You Don't Know JS",
+        "author": "Kyle Simpson",
+        "price": 299,
+        "image": "ydkjs.png"
+    },
+    {
+        "id": 3,
+        "title": "Eloquent JavaScript",
+        "author": "Marijn Haverbeke",
+        "price": 349,
+        "image": "eloquent-js.jpg"
+    },
+    {
+        "id": 4,
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt & David Thomas",
+        "price": 459,
+        "image": "The Pragmatic Programmer.jpg"
+    },
+    {
+        "id": 5,
+        "title": "JavaScript: The Good Parts",
+        "author": "Douglas Crockford",
+        "price": 289,
+        "image": "javascript the good parts.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Refactoring",
+        "author": "Martin Fowler",
+        "price": 529,
+        "image": "refactoring.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Design Patterns",
+        "author": "Erich Gamma et al.",
+        "price": 569,
+        "image": "Design Patterns.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Cracking the Coding Interview",
+        "author": "Gayle Laakmann McDowell",
+        "price": 649,
+        "image": "Cracking the Coding Interview.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Introduction to Algorithms",
+        "author": "Thomas H. Cormen",
+        "price": 699,
+        "image": "Introduction to Algorithms.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Effective Java",
+        "author": "Joshua Bloch",
+        "price": 449,
+        "image": "Effective Java.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Head First Design Patterns",
+        "author": "Eric Freeman",
+        "price": 399,
+        "image": "Head First Design Patterns.jpg"
+    },
+    {
+        "id": 12,
+        "title": "The Art of Computer Programming",
+        "author": "Donald E. Knuth",
+        "price": 799,
+        "image": "The Art of Computer Programming.png"
+    },
+    {
+        "id": 13,
+        "title": "Algorithms to Live By",
+        "author": "Brian Christian & Tom Griffiths",
+        "price": 359,
+        "image": "Algorithms to Live By.jpg"
+    }
+]

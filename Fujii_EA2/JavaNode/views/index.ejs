@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+    <h2>Book List</h2>
+    <ul>
+        <% books.forEach(book=> { %>
+            <li>
+                <strong>
+                    <%= book.title %>
+                </strong> by <%= book.author %> - ₱<%= book.price %><br>
+                        <img src="/images/<%= book.image %>" alt="<%= book.title %>" width="100">
+            </li>
+            <% }) %>
+    </ul>
+    <%- include('partials/footer') %>
