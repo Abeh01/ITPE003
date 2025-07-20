@@ -7,24 +7,20 @@
 </head>
 <body>
   <header>
-    <h1>📚 Welcome to My Online Bookstore</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#books">Books</a>
-      <a href="#cart">Cart</a>
-    </nav>
+    <div class="left-side">
+      <section id="home">
+        <h2>Featured Developer</h2>
+        <div class="dev-info">
+          <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/483099795_1661654225234692_7511742941796518579_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGjsqL6k36MZylhaA0qyK84nuLXFjwRANCe4tcWPBEA0G_7MHu0B9w-7KEobtSh3h4OBhiqSvS8m2huHYV4Tx6X&_nc_ohc=Z8SAmvomdjcQ7kNvwHTOkgq&_nc_oc=AdknqD4N-igK5BCDSqTD-HyQwR4X6Rolhd1sYMoTWNplwIKF4ya3TR8wq3UuSlze7q4&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=homdOrmoF3XYHx2dgXqZvw&oh=00_AfRCWglIWpO-U-bcmL6UjyQagKU9RPkHy6MQAoV1mBNeKQ&oe=68825974" alt="Developer" />
+          <p><strong>Abigail Candido</strong><br>IT Student & Web Developer</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="right-side"></div>
   </header>
 
-  <section id="home">
-    <div class="banner">Your favorite books in one place!</div>
-    <h2>Featured Developer</h2>
-    <div class="dev-info">
-      <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/483099795_1661654225234692_7511742941796518579_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGjsqL6k36MZylhaA0qyK84nuLXFjwRANCe4tcWPBEA0G_7MHu0B9w-7KEobtSh3h4OBhiqSvS8m2huHYV4Tx6X&_nc_ohc=Z8SAmvomdjcQ7kNvwHTOkgq&_nc_oc=AdknqD4N-igK5BCDSqTD-HyQwR4X6Rolhd1sYMoTWNplwIKF4ya3TR8wq3UuSlze7q4&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=homdOrmoF3XYHx2dgXqZvw&oh=00_AfRCWglIWpO-U-bcmL6UjyQagKU9RPkHy6MQAoV1mBNeKQ&oe=68825974" alt="Developer" />
-      <p><strong>Abigail Candido</strong><br>IT Student & Web Developer</p>
-    </div>
-  </section>
-
-  <section id="books">
+  <section id="books" style="margin-top: 100px; padding-left: 100px; padding-right: 100px;">
     <h2>Featured Books</h2>
     <div class="book-list">
 
@@ -61,12 +57,12 @@
   </section>
 
   <section id="cart">
-  <h2>🛒 Your Cart</h2>
-  <ul id="cartList"></ul>
-  <p><strong>Total: ₱<span id="total">0</span></strong></p>
-  <button onclick="checkout()">Buy</button>
-  <div id="receipt"></div>
-</section>
+    <h2>Your Cart</h2>
+    <ul id="cartList"></ul>
+    <p><strong>Total: ₱<span id="total">0</span></strong></p>
+    <button onclick="checkout()">Buy</button>
+    <div id="receipt"></div>
+  </section>
 
 
 <script>
