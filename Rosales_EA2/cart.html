@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="book.html">Browse Books</a> |
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <section>
+    <div id="cartItems"></div>
+    <button onclick="checkout()">Buy Now</button>
+    <div id="summary"></div>
+  </section>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+    let list = "";
+
+    cart.forEach(item => {
+      let [title, price] = item.split("-");
+      total += parseInt(price);
+      list += `<li>${title} - ₱${price}</li>`;
+    });
+
+    document.getElementById("cartItems").innerHTML = `<ul>${list}</ul>`;
+
+    function checkout() {
+      document.getElementById("summary").innerHTML =
+        `<h3>Order Summary:</h3><ul>${list}</ul><strong>Total: ₱${total}</strong>`;
+    }
+  </script>
+</body>
+</html>

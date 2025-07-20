@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5em; margin-top: 1em;">
+        <img src="/images/search.png" alt="search" style="height: 24px;">
+        <h2 style="margin: 0;">Browse Books</h2>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; padding: 2em;">
+        <% books.forEach(book=> { %>
+            <div
+                style="border: 3px solid #ddd; border-radius: 8px; padding: 2em; width: 250px; height: 450px; display: flex; flex-direction: column; justify-content: space-between; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+
+                <!-- Top Content -->
+                <div>
+                    <img src="/images/<%= book.image %>" alt="<%= book.title %>"
+                        style="width: 100%; height: 250px; object-fit: contain; border-radius: 4px; background-color: #fff;">
+
+                    <h3 style="margin: 0.5em 0;">
+                        <%= book.title %>
+                    </h3>
+                    <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0;">
+                        <em>by <%= book.author %></em>
+                    </p>
+                    <p><strong>₱<%= book.price %></strong></p>
+                </div>
+
+                <!-- Fixed Bottom Form -->
+                <form action="/cart/add" method="POST">
+                    <input type="hidden" name="bookId" value="<%= book.id %>">
+
+                    <div style="display: flex; align-items: center; gap: 0.5em;">
+
+                        <!-- Button expands to fill remaining space -->
+                        <div style="flex: 1;">
+                            <%- include('partials/button', { label: 'Add to Cart' , type: 'submit' ,
+                                className: 'btn-orange' , style: 'width: 100%; padding: 6px 12px;' }) %>
+                        </div>
+                        <!-- Combo box with fixed width -->
+                        <select id="qty-<%= book.id %>" name="quantity" style="width: 70px; padding: 6px;">
+                            <% for (let i=1; i <=5; i++) { %>
+                                <option value="<%= i %>">
+                                    <%= i %>
+                                </option>
+                                <% } %>
+                        </select>
+
+
+                    </div>
+                </form>
+
+
+
+            </div>
+
+            <% }) %>
+    </div>
+
+    <%- include('partials/footer') %>

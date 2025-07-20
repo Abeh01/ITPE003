@@ -1,0 +1,6 @@
+<% const safeType=typeof type !=='undefined' ? type : 'button' ; %>
+    <% const safeClass=typeof className !=='undefined' ? className : 'btn-orange' ; %>
+
+        <button type="<%= safeType %>" class="btn <%= safeClass %>">
+            <%= label || 'Click' %>
+        </button>

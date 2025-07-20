@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Bookstore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Welcome to My Online Bookstore</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#books">Books</a>
+      <a href="#cart">Cart</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="banner">Your favorite books in one place!</div>
+    <h2>Featured Developer</h2>
+    <div class="dev-info">
+      <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/483099795_1661654225234692_7511742941796518579_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGjsqL6k36MZylhaA0qyK84nuLXFjwRANCe4tcWPBEA0G_7MHu0B9w-7KEobtSh3h4OBhiqSvS8m2huHYV4Tx6X&_nc_ohc=Z8SAmvomdjcQ7kNvwHTOkgq&_nc_oc=AdknqD4N-igK5BCDSqTD-HyQwR4X6Rolhd1sYMoTWNplwIKF4ya3TR8wq3UuSlze7q4&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=homdOrmoF3XYHx2dgXqZvw&oh=00_AfRCWglIWpO-U-bcmL6UjyQagKU9RPkHy6MQAoV1mBNeKQ&oe=68825974" alt="Developer" />
+      <p><strong>Abigail Candido</strong><br>IT Student & Web Developer</p>
+    </div>
+  </section>
+
+  <section id="books">
+    <h2>Featured Books</h2>
+    <div class="book-list">
+
+      <div class="book-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg" alt="The Great Gatsby" class="book-image">
+        <div class="book-title">The Great Gatsby</div>
+        <div class="book-price">₱500</div>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/91HHqVTAJQL.jpg" alt="Harry Potter" class="book-image">
+        <div class="book-title">Harry Potter</div>
+        <div class="book-price">₱700</div>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits" class="book-image">
+        <div class="book-title">Atomic Habits</div>
+        <div class="book-price">₱650</div>
+      </div>
+
+    </div>
+
+    <div class="order-box">
+      <h3>Select a Book to Add to Cart</h3>
+      <select id="bookSelect">
+        <option value="" disabled selected>Choose a book</option>
+        <option value="The Great Gatsby">The Great Gatsby - ₱500</option>
+        <option value="Harry Potter">Harry Potter - ₱700</option>
+        <option value="Atomic Habits">Atomic Habits - ₱650</option>
+      </select>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </section>
+
+  <section id="cart">
+  <h2>🛒 Your Cart</h2>
+  <ul id="cartList"></ul>
+  <p><strong>Total: ₱<span id="total">0</span></strong></p>
+  <button onclick="checkout()">Buy</button>
+  <div id="receipt"></div>
+</section>
+
+
+<script>
+  const cart = {}; // cart structure: { "Book Title": quantity }
+  const prices = {
+    "The Great Gatsby": 500,
+    "Harry Potter": 700,
+    "Atomic Habits": 650
+  };
+
+  function addToCart() {
+    const book = document.getElementById("bookSelect").value;
+    if (book) {
+      if (cart[book]) {
+        cart[book]++;
+      } else {
+        cart[book] = 1;
+      }
+      updateCart();
+    }
+  }
+
+  function increaseQuantity(book) {
+    cart[book]++;
+    updateCart();
+  }
+
+  function decreaseQuantity(book) {
+    if (cart[book] > 1) {
+      cart[book]--;
+    } else {
+      delete cart[book];
+    }
+    updateCart();
+  }
+
+  function updateCart() {
+    const list = document.getElementById("cartList");
+    const totalSpan = document.getElementById("total");
+    list.innerHTML = "";
+    let total = 0;
+
+    for (const book in cart) {
+      const li = document.createElement("li");
+      const qty = cart[book];
+      const price = prices[book] * qty;
+      li.innerHTML = `
+        ${book} - ₱${prices[book]} × ${qty} = ₱${price}
+        <button onclick="increaseQuantity('${book}')">+</button>
+        <button onclick="decreaseQuantity('${book}')">−</button>
+      `;
+      list.appendChild(li);
+      total += price;
+    }
+
+    totalSpan.textContent = total;
+  }
+
+function checkout() {
+  if (Object.keys(cart).length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  let summary = "<h3>Order Summary</h3><ul>";
+  let total = 0;
+
+  for (const book in cart) {
+    const qty = cart[book];
+    const price = prices[book] * qty;
+    summary += <li>${book} - ₱${prices[book]} × ${qty} = ₱${price}</li>;
+    total += price;
+  }
+
+  summary += '</ul><strong>Total: ₱${total}</strong>';
+  document.getElementById("receipt").innerHTML = summary;
+
+  // ✅ Alert the user after purchase
+  alert("You have successfully bought the book!");
+
+  // ✅ Reset cart data and UI
+  for (const book in cart) {
+    delete cart[book]; // clear all books
+  }
+
+  updateCart(); // reset cart display
+}
+
+
+</script>
+
+</body>
+</html>

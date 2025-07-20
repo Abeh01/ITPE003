@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rosales Hospital | Patient Records</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e9f5f9;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f9ff;
+    }
+
+    tr:hover {
+      background-color: #e0f0ff;
+    }
+
+    .no-data {
+      text-align: center;
+      font-style: italic;
+      color: #888;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rosales Hospital | Patient Records</h1>
+  </header>
+
+  <div class="container">
+    <% if (patients && patients.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Diagnosis</th>
+            <th>Date Admitted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% patients.forEach(function(patient) { %>
+            <tr>
+              <td><%= patient.name %></td>
+              <td><%= patient.age %></td>
+              <td><%= patient.gender %></td>
+              <td><%= patient.diagnosis %></td>
+              <td><%= patient.dateAdmitted %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p class="no-data">No patient records found.</p>
+    <% } %>
+  </div>
+
+</body>
+</html>

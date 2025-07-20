@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Books</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Angelica’s Bookstore</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="book.html">Browse Books</a> |
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Available Books</h2>
+
+    <!-- Combo Box Requirement -->
+    <div class="combo-box">
+      <label for="bookSelect">Quick Order via Combo Box:</label>
+      <select id="bookSelect">
+        <option value="The Hunger Games-350">The Hunger Games - ₱350</option>
+        <option value="Catching Fire-400">Catching Fire - ₱400</option>
+        <option value="Mockingjay-450">Mockingjay - ₱450</option>
+        <option value="The Ballad of Songbirds and Snakes-500">The Ballad of Songbirds and Snakes - ₱500</option>
+      </select>
+      <button onclick="addSelectedToCart()">Add Selected Book</button>
+    </div>
+
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="covers/hungergames.jpg" alt="The Hunger Games">
+        <h3>The Hunger Games</h3>
+        <p>₱350</p>
+        <button onclick="addToCart('The Hunger Games-350')">Add to Cart</button>
+      </div>
+
+      <div class="book-card">
+        <img src="covers/catchingfire.jpg" alt="Catching Fire">
+        <h3>Catching Fire</h3>
+        <p>₱400</p>
+        <button onclick="addToCart('Catching Fire-400')">Add to Cart</button>
+      </div>
+
+      <div class="book-card">
+        <img src="covers/mockingjay.jpg" alt="Mockingjay">
+        <h3>Mockingjay</h3>
+        <p>₱450</p>
+        <button onclick="addToCart('Mockingjay-450')">Add to Cart</button>
+      </div>
+
+      <div class="book-card">
+        <img src="covers/songbirds.jpg" alt="The Ballad of Songbirds and Snakes">
+        <h3>The Ballad of Songbirds and Snakes</h3>
+        <p>₱500</p>
+        <button onclick="addToCart('The Ballad of Songbirds and Snakes-500')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function addToCart(item) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Book added to cart!");
+    }
+
+    function addSelectedToCart() {
+      const selected = document.getElementById("bookSelect").value;
+      addToCart(selected);
+    }
+  </script>
+</body>
+</html>

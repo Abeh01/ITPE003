@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+    <!-- Banner -->
+    <section
+        style="background: url('/images/banner.svg') center/cover no-repeat; color: white; padding: 4em 2em; text-align: center;">
+        <h1 style="font-size: 3em; margin-bottom: 0.5em; font-weight: 900; color: #474745; letter-spacing: -0.05em;">
+            Discover Your
+            Next Favorite Book</h1>
+        <p style="font-size: 1.2em;">Great reads. Great deals. Only here at the Online Bookstore.</p>
+        <a href="/books"><button
+                style="margin-top: 1em; padding: 12px 24px; background-color: #8f4a37; color: white; cursor: pointer; border: none;">Browse
+                Books</button></a>
+    </section>
+
+    <!-- Welcome -->
+    <section style="text-align: center; padding: 3em;">
+        <h2>Welcome to the Online Bookstore</h2>
+        <p>Browse, discover, and enjoy books from various authors and genres.</p>
+    </section>
+
+    <!-- Featured Books -->
+    <section style="padding: 2em;">
+        <h2 style="text-align: center;">📘 Featured Books</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2em; margin-top: 1em;">
+            <div style="max-width: 200px; text-align: center;">
+                <img src="/images/clean-code.jpg" alt="Clean Code" style="width: 100%; border-radius: 8px;">
+                <p><strong>Clean Code</strong><br>₱499</p>
+            </div>
+            <div style="max-width: 200px; text-align: center;">
+                <img src="/images/ydkjs.png" alt="YDKJS" style="width: 100%; border-radius: 8px;">
+                <p><strong>You Don't Know JS</strong><br>₱299</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section style="padding: 2em; background-color: #f8f8f8;">
+        <h2 style="text-align: center;">💥 Special Offers</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2em; margin-top: 1em;">
+            <div style="max-width: 200px; text-align: center;">
+                <img src="/images/eloquent-js.jpg" alt="Eloquent JS" style="width: 100%; border-radius: 8px;">
+                <p><strong>Eloquent JavaScript</strong><br><span style="color: red;">Now ₱349</span> (was ₱399)</p>
+            </div>
+            <div style="max-width: 200px; text-align: center;">
+                <img src="/images/javascript the good parts.jpg" alt="JavaScript: The Good Parts"
+                    style="width: 100%; border-radius: 8px;">
+                <p><strong>Design Patterns</strong><br><span style="color: red;">Now ₱ 289</span> (was ₱600)</p>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/about') %>
+
+        <%- include('partials/footer') %>
