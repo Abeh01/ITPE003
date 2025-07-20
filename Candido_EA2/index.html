@@ -6,153 +6,210 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- === Header Section === -->
   <header>
     <div class="left-side">
       <section id="home">
-        <h2>Featured Developer</h2>
+        <h1>Meet The Developer</h1>
         <div class="dev-info">
-          <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/483099795_1661654225234692_7511742941796518579_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGjsqL6k36MZylhaA0qyK84nuLXFjwRANCe4tcWPBEA0G_7MHu0B9w-7KEobtSh3h4OBhiqSvS8m2huHYV4Tx6X&_nc_ohc=Z8SAmvomdjcQ7kNvwHTOkgq&_nc_oc=AdknqD4N-igK5BCDSqTD-HyQwR4X6Rolhd1sYMoTWNplwIKF4ya3TR8wq3UuSlze7q4&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=homdOrmoF3XYHx2dgXqZvw&oh=00_AfRCWglIWpO-U-bcmL6UjyQagKU9RPkHy6MQAoV1mBNeKQ&oe=68825974" alt="Developer" />
-          <p><strong>Abigail Candido</strong><br>IT Student & Web Developer</p>
+          <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/492800012_1696313105102137_4513278381177117141_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGlBDhrmzbnzTmKrVk9EVgVcL-Q3_bv8v1wv5Df9u_y_Zoed02pvrauswgUh6Hh4ntpkdAnleKbkGjqiS_uCNoc&_nc_ohc=ZCxm0nwLbwYQ7kNvwHd5YNQ&_nc_oc=AdnAJvmOzjM7ambx8i53W3nw4epWdv8E5L7H_iG5hj0Yc-qehL4aRDMh1odPRy_-HwM&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=X2GkgK8IsW1dwIxNySf48Q&oh=00_AfT18AP3T-DYUb0RbzRotkf-y278vtaJ21Qs46VPSYSJMQ&oe=6883153D" alt="Developer" />
+          <div>
+            <p><strong>Abigail Candido</strong></p>
+            <p>3rd year BSIT student in De La Salle University - Dasmariñas.</p>
+          </div>
         </div>
       </section>
     </div>
-
     <div class="right-side"></div>
   </header>
 
-  <section id="books" style="margin-top: 100px; padding-left: 100px; padding-right: 100px;">
-    <h2>Featured Books</h2>
+  <!-- === Books Section === -->
+  <section id="books">
+    <h2 class="section-title">Our Harry Potter Collection</h2>
     <div class="book-list">
 
       <div class="book-card">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg" alt="The Great Gatsby" class="book-image">
-        <div class="book-title">The Great Gatsby</div>
-        <div class="book-price">₱500</div>
+        <img src="https://images-cdn.reedsy.com/discovery/image/675/image/medium_935cabe28bfcfff77e4b48061dc00c7183aa0050.jpg" alt="Harry Potter and the Sorcerer’s Stone" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Sorcerer’s Stone</div>
+          <div class="book-price">₱2,500</div>
+          <button onclick="addToCart('Harry Potter and the Sorcerer’s Stone')">Add to Cart</button>
+        </div>
       </div>
 
       <div class="book-card">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/91HHqVTAJQL.jpg" alt="Harry Potter" class="book-image">
-        <div class="book-title">Harry Potter</div>
-        <div class="book-price">₱700</div>
+        <img src="https://images-cdn.reedsy.com/discovery/image/676/image/medium_0bfcf489d8584cb5d74a719a5128bf2ce42778af.jpg" alt="Harry Potter and the Chamber of Secrets" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Chamber of Secrets</div>
+          <div class="book-price">₱2,200</div>
+          <button onclick="addToCart('Harry Potter and the Chamber of Secrets')">Add to Cart</button>
+        </div>
       </div>
 
       <div class="book-card">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits" class="book-image">
-        <div class="book-title">Atomic Habits</div>
-        <div class="book-price">₱650</div>
+        <img src="https://images-cdn.reedsy.com/discovery/image/677/image/medium_3ee2a2e0118d89ffcab694f6c7fb1a4f860da533.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Prisoner of Azkaban</div>
+          <div class="book-price">₱2,150</div>
+          <button onclick="addToCart('Harry Potter and the Prisoner of Azkaban')">Add to Cart</button>
+        </div>
       </div>
 
-    </div>
+      <div class="book-card">
+        <img src="https://images-cdn.reedsy.com/discovery/image/678/image/medium_ac6e168d4e39c875b638985a6f2b2e9034f78c0b.jpg" alt="Harry Potter and the Goblet of Fire" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Goblet of Fire</div>
+          <div class="book-price">₱2,150</div>
+          <button onclick="addToCart('Harry Potter and the Goblet of Fire')">Add to Cart</button>
+        </div>
+      </div>
 
-    <div class="order-box">
-      <h3>Select a Book to Add to Cart</h3>
-      <select id="bookSelect">
-        <option value="" disabled selected>Choose a book</option>
-        <option value="The Great Gatsby">The Great Gatsby - ₱500</option>
-        <option value="Harry Potter">Harry Potter - ₱700</option>
-        <option value="Atomic Habits">Atomic Habits - ₱650</option>
-      </select>
-      <button onclick="addToCart()">Add to Cart</button>
+      <div class="book-card">
+        <img src="https://images-cdn.reedsy.com/discovery/image/679/image/medium_4972bde577078c76979744f07e5c9f77ddc40cea.jpg" alt="Harry Potter and the Order of the Phoenix" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Order of the Phoenix</div>
+          <div class="book-price">₱2,100</div>
+          <button onclick="addToCart('Harry Potter and the Order of the Phoenix')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images-cdn.reedsy.com/discovery/image/680/image/medium_a3854c8735b6524046f5fc527227dad3101ec23e.jpg" alt="Harry Potter and the Half-Blood Prince" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Half-Blood Prince</div>
+          <div class="book-price">₱2,000</div>
+          <button onclick="addToCart('Harry Potter and the Half-Blood Prince')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images-cdn.reedsy.com/discovery/image/681/image/medium_bb9f2c35b7180820e05f4adbe78844edaf44adbc.jpg" alt="Harry Potter and the Deathly Hallows" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Deathly Hallows</div>
+          <div class="book-price">₱1,500</div>
+          <button onclick="addToCart('Harry Potter and the Deathly Hallows')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images-cdn.reedsy.com/discovery/image/682/image/medium_f2478525b5efef784b36852102d30fa99776d0b9.jpg" alt="Harry Potter and the Cursed Child" class="book-image">
+        <div class="book-info">
+          <div class="book-title">Harry Potter and the Cursed Child</div>
+          <div class="book-price">₱1,500</div>
+          <button onclick="addToCart('Harry Potter and the Cursed Child')">Add to Cart</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- === Cart Section === -->
   <section id="cart">
     <h2>Your Cart</h2>
-    <ul id="cartList"></ul>
-    <p><strong>Total: ₱<span id="total">0</span></strong></p>
-    <button onclick="checkout()">Buy</button>
+    <div id="cartList" class="cart-list"></div>
+    <p class="cart-total"><strong>Total: ₱<span id="total">0</span></strong></p>
+    <button onclick="checkout()">Checkout</button>
     <div id="receipt"></div>
   </section>
 
+  <!-- === JavaScript === -->
+  <script>
+    const cart = {};
+    const prices = {
+      "Harry Potter and the Sorcerer’s Stone": 2500,
+      "Harry Potter and the Chamber of Secrets": 2200,
+      "Harry Potter and the Prisoner of Azkaban": 2150,
+      "Harry Potter and the Goblet of Fire": 2150,
+      "Harry Potter and the Order of the Phoenix": 2100,
+      "Harry Potter and the Half-Blood Prince": 2000,
+      "Harry Potter and the Deathly Hallows": 1500,
+      "Harry Potter and the Cursed Child": 1500
+    };
 
-<script>
-  const cart = {}; // cart structure: { "Book Title": quantity }
-  const prices = {
-    "The Great Gatsby": 500,
-    "Harry Potter": 700,
-    "Atomic Habits": 650
-  };
+    function addToCart(book) {
+      if (book) {
+        if (cart[book]) {
+          cart[book]++;
+        } else {
+          cart[book] = 1;
+        }
+        updateCart();
+      }
+    }
 
-  function addToCart() {
-    const book = document.getElementById("bookSelect").value;
-    if (book) {
-      if (cart[book]) {
-        cart[book]++;
+    function increaseQuantity(book) {
+      cart[book]++;
+      updateCart();
+    }
+
+    function decreaseQuantity(book) {
+      if (cart[book] > 1) {
+        cart[book]--;
       } else {
-        cart[book] = 1;
+        delete cart[book];
       }
       updateCart();
     }
-  }
 
-  function increaseQuantity(book) {
-    cart[book]++;
-    updateCart();
-  }
+    function updateCart() {
+      const list = document.getElementById("cartList");
+      const totalSpan = document.getElementById("total");
+      list.innerHTML = "";
+      let total = 0;
 
-  function decreaseQuantity(book) {
-    if (cart[book] > 1) {
-      cart[book]--;
-    } else {
-      delete cart[book];
-    }
-    updateCart();
-  }
+      for (const book in cart) {
+        const qty = cart[book];
+        const price = prices[book] * qty;
 
-  function updateCart() {
-    const list = document.getElementById("cartList");
-    const totalSpan = document.getElementById("total");
-    list.innerHTML = "";
-    let total = 0;
+        const item = document.createElement("div");
+        item.className = "cart-item";
+        item.innerHTML = `
+          <div class="cart-details">
+            <div><strong>${book}</strong></div>
+            <div>₱${prices[book]} × ${qty} = ₱${price}</div>
+          </div>
+          <div class="cart-controls">
+            <button onclick="increaseQuantity('${book}')">+</button>
+            <button onclick="decreaseQuantity('${book}')">−</button>
+          </div>
+        `;
 
-    for (const book in cart) {
-      const li = document.createElement("li");
-      const qty = cart[book];
-      const price = prices[book] * qty;
-      li.innerHTML = `
-        ${book} - ₱${prices[book]} × ${qty} = ₱${price}
-        <button onclick="increaseQuantity('${book}')">+</button>
-        <button onclick="decreaseQuantity('${book}')">−</button>
-      `;
-      list.appendChild(li);
-      total += price;
+        list.appendChild(item);
+        total += price;
+      }
+
+      totalSpan.textContent = total;
     }
 
-    totalSpan.textContent = total;
-  }
+    function checkout() {
+      if (Object.keys(cart).length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
 
-function checkout() {
-  if (Object.keys(cart).length === 0) {
-    alert("Your cart is empty!");
-    return;
-  }
+      let summary = "<h3>Order Summary</h3><ul>";
+      let total = 0;
 
-  let summary = "<h3>Order Summary</h3><ul>";
-  let total = 0;
+      for (const book in cart) {
+        const qty = cart[book];
+        const price = prices[book] * qty;
+        summary += `<li>${book} - ₱${price}</li>`;
+        total += price;
+      }
 
-  for (const book in cart) {
-    const qty = cart[book];
-    const price = prices[book] * qty;
-    summary += "<li>${book} - ₱${prices[book]} × ${qty} = ₱${price}</li>";
-    total += price;
-  }
+      summary += `</ul><strong>Total: ₱${total}</strong>`;
+      document.getElementById("receipt").innerHTML = summary;
 
-  summary += "</ul><strong>Total: ₱${total}</strong>";
-  document.getElementById("receipt").innerHTML = summary;
+      alert("You have successfully bought the book!");
 
-  // ✅ Alert the user after purchase
-  alert("You have successfully bought the book!");
+      for (const book in cart) {
+        delete cart[book];
+      }
 
-  // ✅ Reset cart data and UI
-  for (const book in cart) {
-    delete cart[book]; // clear all books
-  }
-
-  updateCart(); // reset cart display
-}
-
-
-</script>
+      updateCart();
+    }
+  </script>
 
 </body>
 </html>
