@@ -137,11 +137,11 @@ function checkout() {
   for (const book in cart) {
     const qty = cart[book];
     const price = prices[book] * qty;
-    summary += <li>${book} - ₱${prices[book]} × ${qty} = ₱${price}</li>;
+    summary += "<li>${book} - ₱${prices[book]} × ${qty} = ₱${price}</li>";
     total += price;
   }
 
-  summary += '</ul><strong>Total: ₱${total}</strong>';
+  summary += "</ul><strong>Total: ₱${total}</strong>";
   document.getElementById("receipt").innerHTML = summary;
 
   // ✅ Alert the user after purchase
