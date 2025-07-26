@@ -1,0 +1,4 @@
+_id,firstName,lastName,email,phoneNumber,username,password,role,__v
+6884a93920731e4cc567fb17,Abigail,Candido,abicandido@gmail.com,09123456789,wasabehh,12345678,user,0
+6884ac486174582c8a2dfc48,Mearie,Fujii,meariefujii@gmail.com,09987654321,meariefujii,12345678,user,0
+6884aca96174582c8a2dfc5d,Angelica,Rosales,angelicarosales@gmail.com,09568741239,lykarosales,12345678,user,0
